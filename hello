@@ -1,0 +1,19 @@
+name: hello-world-example
+on:
+  push:
+jobs:
+  say-hello:
+    runs-on: ubuntu-latest
+    steps:
+      -
+        name: Say Hello
+        run: echo "Hello world!"
+      -
+        name: Do stuff
+        run: |
+          echo "welcome to the"
+          echo "world of"
+          echo "gihub actions migrate"
+      -
+        name: Say Goodbye
+        run: echo "Goodbye!"
