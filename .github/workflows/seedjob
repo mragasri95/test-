@@ -1,0 +1,30 @@
+pipeline {
+    agent {
+        label 'ubuntu-latest'
+    }
+    triggers {
+        push
+    }
+    stages {
+        stage('Say Hello') {
+            steps {
+                sh 'echo "Hello world!"'
+            }
+        }
+        stage('Do stuff') {
+            steps {
+                sh '''
+                    echo "welcome to the"
+                    echo "world of"
+                    echo "github actions migrate"
+                '''
+            }
+        }
+        stage('Say Goodbye') {
+            steps {
+                // You can add actions here to say goodbye
+                sh 'echo "Goodbye world!"'
+            }
+        }
+    }
+}
